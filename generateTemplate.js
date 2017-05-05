@@ -1,4 +1,4 @@
-fs = require('fs');
+  fs = require('fs');
 handlebars = require('handlebars');
 var constants = fs.readFileSync('./constants.json');
 var constantsJSON = JSON.parse(constants);
@@ -23,9 +23,20 @@ function formatCategories(constantsJSON) {
 
 }
 
+function makeGroupedCatsCollection(groupedCats) {
+  categoryCollection = []
+  for (var k in groupedCats) {
+    if (groupedCats.hasOwnProperty(k)) {
+       categoryCollection.push({category: k, items: groupedCats[k]});
+    }
+  }
+  return categoryCollection;
+}
+
 var source = fs.readFileSync('./template.handlebars', 'utf-8');
 var template = handlebars.compile(source);
-var data = formatCategories(constantsJSON);
+var groupedCats = formatCategories(constantsJSON);
+var data = {vpeData: makeGroupedCatsCollection(groupedCats)};
 var result = template(data);
 
 fs.writeFile('index.html', result, function(err){

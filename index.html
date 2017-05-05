@@ -1,5 +1,373 @@
-<p>Hello, my name is Alan. I am from Somewhere, TX. I have 2 kids:</p>
-<ul>
-    <li>Jimmy is 12</li>
-    <li>Sally is 4</li>
-</ul>
+<h1>VPE Data</h1>
+<h3>Machining <h3>
+
+  <ul>
+      <li>Labor Rate
+        <ul>
+          <li>59</li>
+          <li>dollars / hour</li>
+          <li></li>
+        </ul>
+      </li>
+      <li>Setup Time
+        <ul>
+          <li>5</li>
+          <li>minutes</li>
+          <li></li>
+        </ul>
+      </li>
+      <li>Program Time
+        <ul>
+          <li>2</li>
+          <li>minutes</li>
+          <li>per cubic inch of removal volume - as a proxy for part complexity</li>
+        </ul>
+      </li>
+      <li>Run Time
+        <ul>
+          <li>25</li>
+          <li>seconds</li>
+          <li>per cubic inch of removal volume - as a proxy for part complexity</li>
+        </ul>
+      </li>
+      <li>Inspect Time
+        <ul>
+          <li>5</li>
+          <li>seconds</li>
+          <li>per cubic inch of removal volume - as a proxy for part complexity</li>
+        </ul>
+      </li>
+  </ul>
+<h3>Casting <h3>
+
+  <ul>
+      <li>Labor Rate
+        <ul>
+          <li>30</li>
+          <li>dollars / hour</li>
+          <li></li>
+        </ul>
+      </li>
+      <li>Melting Time
+        <ul>
+          <li>2</li>
+          <li>seconds</li>
+          <li>per cubic inch of material</li>
+        </ul>
+      </li>
+      <li>Molding Time
+        <ul>
+          <li>90</li>
+          <li>seconds</li>
+          <li>per cubic inch of material, investment casting only</li>
+        </ul>
+      </li>
+      <li>Holding Time
+        <ul>
+          <li>90</li>
+          <li>seconds</li>
+          <li>per cubic inch of material, non-cored greensand casting only</li>
+        </ul>
+      </li>
+      <li>Shakeout Time
+        <ul>
+          <li>1</li>
+          <li>minute</li>
+          <li>per part</li>
+        </ul>
+      </li>
+      <li>Cooling Time
+        <ul>
+          <li>10</li>
+          <li>seconds</li>
+          <li>per cubic inch of material</li>
+        </ul>
+      </li>
+      <li>Finishing Time
+        <ul>
+          <li>5</li>
+          <li>minutes</li>
+          <li>per part</li>
+        </ul>
+      </li>
+  </ul>
+<h3>Investment Casting <h3>
+
+  <ul>
+      <li>Batch Volume
+        <ul>
+          <li>5</li>
+          <li>feet**3</li>
+          <li>to estimate the number of castings performed in a single batch</li>
+        </ul>
+      </li>
+  </ul>
+<h3>General Labor <h3>
+
+  <ul>
+      <li>Labor Rate
+        <ul>
+          <li>25</li>
+          <li>dollars / hour</li>
+          <li></li>
+        </ul>
+      </li>
+      <li>Bolt Time
+        <ul>
+          <li>30</li>
+          <li>seconds</li>
+          <li></li>
+        </ul>
+      </li>
+      <li>Order Time
+        <ul>
+          <li>5</li>
+          <li>minutes</li>
+          <li>time to place a single or bulk order</li>
+        </ul>
+      </li>
+      <li>Receive Time
+        <ul>
+          <li>10</li>
+          <li>minutes</li>
+          <li>time to receive a single or bulk order at the facility (unload truck, check manifest, etc.)</li>
+        </ul>
+      </li>
+      <li>Unbox Time
+        <ul>
+          <li>15</li>
+          <li>minutes</li>
+          <li>time to unbox a single or bulk order</li>
+        </ul>
+      </li>
+  </ul>
+<h3>Welding <h3>
+
+  <ul>
+      <li>Labor Rate
+        <ul>
+          <li>40</li>
+          <li>dollars / hour</li>
+          <li></li>
+        </ul>
+      </li>
+      <li>Prepare Time
+        <ul>
+          <li>30</li>
+          <li>seconds</li>
+          <li>per inch of weld</li>
+        </ul>
+      </li>
+      <li>Weld Time
+        <ul>
+          <li>2</li>
+          <li>minutes</li>
+          <li>per inch of weld</li>
+        </ul>
+      </li>
+      <li>Visual Inspection Time
+        <ul>
+          <li>2</li>
+          <li>seconds</li>
+          <li>per inch of weld</li>
+        </ul>
+      </li>
+  </ul>
+<h3>Plating <h3>
+
+  <ul>
+      <li>Labor Rate
+        <ul>
+          <li>30</li>
+          <li>dollars / hour</li>
+          <li></li>
+        </ul>
+      </li>
+      <li>Setup Time
+        <ul>
+          <li>5</li>
+          <li>minutes</li>
+          <li>per part</li>
+        </ul>
+      </li>
+      <li>Stripping Time
+        <ul>
+          <li>30</li>
+          <li>seconds</li>
+          <li>per square inch of surface area</li>
+        </ul>
+      </li>
+      <li>Blasting Time
+        <ul>
+          <li>20</li>
+          <li>seconds</li>
+          <li>per square inch of surface area</li>
+        </ul>
+      </li>
+      <li>Plating Time
+        <ul>
+          <li>60</li>
+          <li>minutes</li>
+          <li>per part</li>
+        </ul>
+      </li>
+      <li>Phosphate Coating :: Preparation Time
+        <ul>
+          <li>15</li>
+          <li>minutes</li>
+          <li>per part</li>
+        </ul>
+      </li>
+      <li>Phosphate Coating :: Cleaning Time
+        <ul>
+          <li>10</li>
+          <li>minutes</li>
+          <li>per part</li>
+        </ul>
+      </li>
+      <li>Phosphate Coating :: Activation Time
+        <ul>
+          <li>20</li>
+          <li>minutes</li>
+          <li>per part</li>
+        </ul>
+      </li>
+      <li>Phosphate Coating :: Phosphating Time
+        <ul>
+          <li>60</li>
+          <li>minutes</li>
+          <li>per part</li>
+        </ul>
+      </li>
+      <li>Phosphate Coating :: Treatment Time
+        <ul>
+          <li>20</li>
+          <li>minutes</li>
+          <li>per part</li>
+        </ul>
+      </li>
+  </ul>
+<h3>Painting <h3>
+
+  <ul>
+      <li>Labor Rate
+        <ul>
+          <li>30</li>
+          <li>dollars / hour</li>
+          <li></li>
+        </ul>
+      </li>
+      <li>Washing Time
+        <ul>
+          <li>6</li>
+          <li>seconds</li>
+          <li>per square inch of surface area</li>
+        </ul>
+      </li>
+      <li>Masking Time
+        <ul>
+          <li>6</li>
+          <li>seconds</li>
+          <li>per square inch of surface area</li>
+        </ul>
+      </li>
+      <li>Apply Time
+        <ul>
+          <li>3</li>
+          <li>seconds</li>
+          <li>per square inch of surface area</li>
+        </ul>
+      </li>
+      <li>Curing Time
+        <ul>
+          <li>30</li>
+          <li>minutes</li>
+          <li>per part</li>
+        </ul>
+      </li>
+      <li>Drying Time
+        <ul>
+          <li>60</li>
+          <li>minutes</li>
+          <li>per part</li>
+        </ul>
+      </li>
+      <li>Inspecting Time
+        <ul>
+          <li>10</li>
+          <li>minutes</li>
+          <li>per part</li>
+        </ul>
+      </li>
+      <li>Finishing Time
+        <ul>
+          <li>30</li>
+          <li>minutes</li>
+          <li>per part</li>
+        </ul>
+      </li>
+  </ul>
+<h3>X-Ray Machine <h3>
+
+  <ul>
+      <li>Cost
+        <ul>
+          <li>10</li>
+          <li>dollars</li>
+          <li>per usage</li>
+        </ul>
+      </li>
+      <li>Setup Time
+        <ul>
+          <li>10</li>
+          <li>minutes</li>
+          <li>per usage</li>
+        </ul>
+      </li>
+      <li>Scan Time
+        <ul>
+          <li>5</li>
+          <li>seconds</li>
+          <li>per inch of weld</li>
+        </ul>
+      </li>
+  </ul>
+<h3>Material <h3>
+
+  <ul>
+      <li>Steel :: Cost
+        <ul>
+          <li>0.5</li>
+          <li>dollars / inch**3</li>
+          <li></li>
+        </ul>
+      </li>
+      <li>Aluminum :: Cost
+        <ul>
+          <li>0.8</li>
+          <li>dollars / inch**3</li>
+          <li></li>
+        </ul>
+      </li>
+      <li>Paint :: Cost
+        <ul>
+          <li>0.2</li>
+          <li>dollars / inch**2</li>
+          <li></li>
+        </ul>
+      </li>
+      <li>Powder :: Cost
+        <ul>
+          <li>0.3</li>
+          <li>dollars / inch**2</li>
+          <li></li>
+        </ul>
+      </li>
+      <li>Weld Filler :: Cost
+        <ul>
+          <li>2</li>
+          <li>dollars / inch</li>
+          <li></li>
+        </ul>
+      </li>
+  </ul>

@@ -1,6 +1,16 @@
-<p>Hello, my name is {{name}}. I am from {{hometown}}. I have {{kids.length}} kids:</p>
-<ul>
-  {{#kids}}
-    <li>{{name}} is {{age}}</li>
-  {{/kids}}
-</ul>
+<h1>VPE Data</h1>
+{{#vpeData}}
+<h3>{{category}}<h3>
+
+  <ul>
+    {{#items}}
+      <li>{{name}}
+        <ul>
+          <li>{{value}}</li>
+          <li>{{unit}}</li>
+          <li>{{help}}</li>
+        </ul>
+      </li>
+    {{/items}}
+  </ul>
+{{/vpeData}}

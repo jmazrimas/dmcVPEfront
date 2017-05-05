@@ -34,12 +34,14 @@ function makeGroupedCatsCollection(groupedCats) {
 }
 
 var source = fs.readFileSync('./template.handlebars', 'utf-8');
+var cssRaw = fs.readFileSync('./vpe.css', 'utf-8');
 var template = handlebars.compile(source);
 var groupedCats = formatCategories(constantsJSON);
 var data = {vpeData: makeGroupedCatsCollection(groupedCats)};
 var result = template(data);
+var style = "<style>"+cssRaw+"</style>"
 
-fs.writeFile('index.html', result, function(err){
+fs.writeFile('index.html', style+result, function(err){
   if (err) {
     console.log('an error occurred')
   } else {

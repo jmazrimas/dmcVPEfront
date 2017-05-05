@@ -1,16 +1,19 @@
-<h1>VPE Data</h1>
-{{#vpeData}}
-<h3>{{category}}<h3>
+<div id="vpe">
+  <h1>VPE Data</h1>
+  {{#vpeData}}
+  <h3>{{category}}<h3>
 
-  <ul>
-    {{#items}}
-      <li>{{name}}
-        <ul>
-          <li>{{value}}</li>
-          <li>{{unit}}</li>
-          <li>{{help}}</li>
-        </ul>
-      </li>
-    {{/items}}
-  </ul>
-{{/vpeData}}
+    <ul>
+      {{#items}}
+        <li>{{name}}
+          <ul>
+            <li>{{value}}</li>
+            <li>{{unit}}</li>
+            <li>{{help}}</li>
+          </ul>
+        </li>
+      {{/items}}
+    </ul>
+
+  {{/vpeData}}
+</div>

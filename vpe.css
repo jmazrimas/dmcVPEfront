@@ -1,3 +1,26 @@
-#vpe h1{
-  color: green;
+#vpe {
+  font-family: sans-serif;
+}
+
+.item {
+  border-radius: 4px;
+  margin: 20px 0px;
+}
+
+.key {
+  font-size: .3em;
+}
+
+.title {
+  font-size: 1.2em;
+  font-weight: 100;
+}
+
+.help {
+  color: darkgrey;
+  font-size: .6em;
+}
+
+.unit {
+  font-size: .8em;
 }

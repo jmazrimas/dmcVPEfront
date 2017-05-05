@@ -1,387 +1,890 @@
-<style>#vpe h1{
-  color: green;
-}
-</style><div id="vpe">
+<link rel="stylesheet" type="text/css" href="vpe.css"><link rel="stylesheet" type="text/css" href="vendor/bootstrap.css"><div id="vpe" class="container">
   <h1>VPE Data</h1>
   <h3>Machining <h3>
 
-    <ul>
-        <li>Labor Rate
-          <ul>
-            <li>59</li>
-            <li>dollars / hour</li>
-            <li></li>
-          </ul>
-        </li>
-        <li>Setup Time
-          <ul>
-            <li>5</li>
-            <li>minutes</li>
-            <li></li>
-          </ul>
-        </li>
-        <li>Program Time
-          <ul>
-            <li>2</li>
-            <li>minutes</li>
-            <li>per cubic inch of removal volume - as a proxy for part complexity</li>
-          </ul>
-        </li>
-        <li>Run Time
-          <ul>
-            <li>25</li>
-            <li>seconds</li>
-            <li>per cubic inch of removal volume - as a proxy for part complexity</li>
-          </ul>
-        </li>
-        <li>Inspect Time
-          <ul>
-            <li>5</li>
-            <li>seconds</li>
-            <li>per cubic inch of removal volume - as a proxy for part complexity</li>
-          </ul>
-        </li>
-    </ul>
+        <div class="item column">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="title">Labor Rate</div>
+              <div class="key">key: Machining  :: Labor Rate</div>
+            </div>
+          </div>
+
+          <div class="column">
+              <input id=" :: Labor Rate" type="text" name="fname" placeholder="59">
+              <div class="unit">
+                Unit: dollars / hour
+              </div>
+          </div>
+
+
+        </div>
+        <div class="item column">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="title">Setup Time</div>
+              <div class="key">key: Machining  :: Setup Time</div>
+            </div>
+          </div>
+
+          <div class="column">
+              <input id=" :: Setup Time" type="text" name="fname" placeholder="5">
+              <div class="unit">
+                Unit: minutes
+              </div>
+          </div>
+
+
+        </div>
+        <div class="item column">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="title">Program Time</div>
+              <div class="key">key: Machining  :: Program Time</div>
+              <div class="help">per cubic inch of removal volume - as a proxy for part complexity</div>
+            </div>
+          </div>
+
+          <div class="column">
+              <input id=" :: Program Time" type="text" name="fname" placeholder="2">
+              <div class="unit">
+                Unit: minutes
+              </div>
+          </div>
+
+
+        </div>
+        <div class="item column">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="title">Run Time</div>
+              <div class="key">key: Machining  :: Run Time</div>
+              <div class="help">per cubic inch of removal volume - as a proxy for part complexity</div>
+            </div>
+          </div>
+
+          <div class="column">
+              <input id=" :: Run Time" type="text" name="fname" placeholder="25">
+              <div class="unit">
+                Unit: seconds
+              </div>
+          </div>
+
+
+        </div>
+        <div class="item column">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="title">Inspect Time</div>
+              <div class="key">key: Machining  :: Inspect Time</div>
+              <div class="help">per cubic inch of removal volume - as a proxy for part complexity</div>
+            </div>
+          </div>
+
+          <div class="column">
+              <input id=" :: Inspect Time" type="text" name="fname" placeholder="5">
+              <div class="unit">
+                Unit: seconds
+              </div>
+          </div>
+
+
+        </div>
+
 
   <h3>Casting <h3>
 
-    <ul>
-        <li>Labor Rate
-          <ul>
-            <li>30</li>
-            <li>dollars / hour</li>
-            <li></li>
-          </ul>
-        </li>
-        <li>Melting Time
-          <ul>
-            <li>2</li>
-            <li>seconds</li>
-            <li>per cubic inch of material</li>
-          </ul>
-        </li>
-        <li>Molding Time
-          <ul>
-            <li>90</li>
-            <li>seconds</li>
-            <li>per cubic inch of material, investment casting only</li>
-          </ul>
-        </li>
-        <li>Holding Time
-          <ul>
-            <li>90</li>
-            <li>seconds</li>
-            <li>per cubic inch of material, non-cored greensand casting only</li>
-          </ul>
-        </li>
-        <li>Shakeout Time
-          <ul>
-            <li>1</li>
-            <li>minute</li>
-            <li>per part</li>
-          </ul>
-        </li>
-        <li>Cooling Time
-          <ul>
-            <li>10</li>
-            <li>seconds</li>
-            <li>per cubic inch of material</li>
-          </ul>
-        </li>
-        <li>Finishing Time
-          <ul>
-            <li>5</li>
-            <li>minutes</li>
-            <li>per part</li>
-          </ul>
-        </li>
-    </ul>
+        <div class="item column">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="title">Labor Rate</div>
+              <div class="key">key: Casting  :: Labor Rate</div>
+            </div>
+          </div>
+
+          <div class="column">
+              <input id=" :: Labor Rate" type="text" name="fname" placeholder="30">
+              <div class="unit">
+                Unit: dollars / hour
+              </div>
+          </div>
+
+
+        </div>
+        <div class="item column">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="title">Melting Time</div>
+              <div class="key">key: Casting  :: Melting Time</div>
+              <div class="help">per cubic inch of material</div>
+            </div>
+          </div>
+
+          <div class="column">
+              <input id=" :: Melting Time" type="text" name="fname" placeholder="2">
+              <div class="unit">
+                Unit: seconds
+              </div>
+          </div>
+
+
+        </div>
+        <div class="item column">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="title">Molding Time</div>
+              <div class="key">key: Casting  :: Molding Time</div>
+              <div class="help">per cubic inch of material, investment casting only</div>
+            </div>
+          </div>
+
+          <div class="column">
+              <input id=" :: Molding Time" type="text" name="fname" placeholder="90">
+              <div class="unit">
+                Unit: seconds
+              </div>
+          </div>
+
+
+        </div>
+        <div class="item column">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="title">Holding Time</div>
+              <div class="key">key: Casting  :: Holding Time</div>
+              <div class="help">per cubic inch of material, non-cored greensand casting only</div>
+            </div>
+          </div>
+
+          <div class="column">
+              <input id=" :: Holding Time" type="text" name="fname" placeholder="90">
+              <div class="unit">
+                Unit: seconds
+              </div>
+          </div>
+
+
+        </div>
+        <div class="item column">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="title">Shakeout Time</div>
+              <div class="key">key: Casting  :: Shakeout Time</div>
+              <div class="help">per part</div>
+            </div>
+          </div>
+
+          <div class="column">
+              <input id=" :: Shakeout Time" type="text" name="fname" placeholder="1">
+              <div class="unit">
+                Unit: minute
+              </div>
+          </div>
+
+
+        </div>
+        <div class="item column">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="title">Cooling Time</div>
+              <div class="key">key: Casting  :: Cooling Time</div>
+              <div class="help">per cubic inch of material</div>
+            </div>
+          </div>
+
+          <div class="column">
+              <input id=" :: Cooling Time" type="text" name="fname" placeholder="10">
+              <div class="unit">
+                Unit: seconds
+              </div>
+          </div>
+
+
+        </div>
+        <div class="item column">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="title">Finishing Time</div>
+              <div class="key">key: Casting  :: Finishing Time</div>
+              <div class="help">per part</div>
+            </div>
+          </div>
+
+          <div class="column">
+              <input id=" :: Finishing Time" type="text" name="fname" placeholder="5">
+              <div class="unit">
+                Unit: minutes
+              </div>
+          </div>
+
+
+        </div>
+
 
   <h3>Investment Casting <h3>
 
-    <ul>
-        <li>Batch Volume
-          <ul>
-            <li>5</li>
-            <li>feet**3</li>
-            <li>to estimate the number of castings performed in a single batch</li>
-          </ul>
-        </li>
-    </ul>
+        <div class="item column">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="title">Batch Volume</div>
+              <div class="key">key: Investment Casting  :: Batch Volume</div>
+              <div class="help">to estimate the number of castings performed in a single batch</div>
+            </div>
+          </div>
+
+          <div class="column">
+              <input id=" :: Batch Volume" type="text" name="fname" placeholder="5">
+              <div class="unit">
+                Unit: feet**3
+              </div>
+          </div>
+
+
+        </div>
+
 
   <h3>General Labor <h3>
 
-    <ul>
-        <li>Labor Rate
-          <ul>
-            <li>25</li>
-            <li>dollars / hour</li>
-            <li></li>
-          </ul>
-        </li>
-        <li>Bolt Time
-          <ul>
-            <li>30</li>
-            <li>seconds</li>
-            <li></li>
-          </ul>
-        </li>
-        <li>Order Time
-          <ul>
-            <li>5</li>
-            <li>minutes</li>
-            <li>time to place a single or bulk order</li>
-          </ul>
-        </li>
-        <li>Receive Time
-          <ul>
-            <li>10</li>
-            <li>minutes</li>
-            <li>time to receive a single or bulk order at the facility (unload truck, check manifest, etc.)</li>
-          </ul>
-        </li>
-        <li>Unbox Time
-          <ul>
-            <li>15</li>
-            <li>minutes</li>
-            <li>time to unbox a single or bulk order</li>
-          </ul>
-        </li>
-    </ul>
+        <div class="item column">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="title">Labor Rate</div>
+              <div class="key">key: General Labor  :: Labor Rate</div>
+            </div>
+          </div>
+
+          <div class="column">
+              <input id=" :: Labor Rate" type="text" name="fname" placeholder="25">
+              <div class="unit">
+                Unit: dollars / hour
+              </div>
+          </div>
+
+
+        </div>
+        <div class="item column">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="title">Bolt Time</div>
+              <div class="key">key: General Labor  :: Bolt Time</div>
+            </div>
+          </div>
+
+          <div class="column">
+              <input id=" :: Bolt Time" type="text" name="fname" placeholder="30">
+              <div class="unit">
+                Unit: seconds
+              </div>
+          </div>
+
+
+        </div>
+        <div class="item column">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="title">Order Time</div>
+              <div class="key">key: General Labor  :: Order Time</div>
+              <div class="help">time to place a single or bulk order</div>
+            </div>
+          </div>
+
+          <div class="column">
+              <input id=" :: Order Time" type="text" name="fname" placeholder="5">
+              <div class="unit">
+                Unit: minutes
+              </div>
+          </div>
+
+
+        </div>
+        <div class="item column">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="title">Receive Time</div>
+              <div class="key">key: General Labor  :: Receive Time</div>
+              <div class="help">time to receive a single or bulk order at the facility (unload truck, check manifest, etc.)</div>
+            </div>
+          </div>
+
+          <div class="column">
+              <input id=" :: Receive Time" type="text" name="fname" placeholder="10">
+              <div class="unit">
+                Unit: minutes
+              </div>
+          </div>
+
+
+        </div>
+        <div class="item column">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="title">Unbox Time</div>
+              <div class="key">key: General Labor  :: Unbox Time</div>
+              <div class="help">time to unbox a single or bulk order</div>
+            </div>
+          </div>
+
+          <div class="column">
+              <input id=" :: Unbox Time" type="text" name="fname" placeholder="15">
+              <div class="unit">
+                Unit: minutes
+              </div>
+          </div>
+
+
+        </div>
+
 
   <h3>Welding <h3>
 
-    <ul>
-        <li>Labor Rate
-          <ul>
-            <li>40</li>
-            <li>dollars / hour</li>
-            <li></li>
-          </ul>
-        </li>
-        <li>Prepare Time
-          <ul>
-            <li>30</li>
-            <li>seconds</li>
-            <li>per inch of weld</li>
-          </ul>
-        </li>
-        <li>Weld Time
-          <ul>
-            <li>2</li>
-            <li>minutes</li>
-            <li>per inch of weld</li>
-          </ul>
-        </li>
-        <li>Visual Inspection Time
-          <ul>
-            <li>2</li>
-            <li>seconds</li>
-            <li>per inch of weld</li>
-          </ul>
-        </li>
-    </ul>
+        <div class="item column">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="title">Labor Rate</div>
+              <div class="key">key: Welding  :: Labor Rate</div>
+            </div>
+          </div>
+
+          <div class="column">
+              <input id=" :: Labor Rate" type="text" name="fname" placeholder="40">
+              <div class="unit">
+                Unit: dollars / hour
+              </div>
+          </div>
+
+
+        </div>
+        <div class="item column">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="title">Prepare Time</div>
+              <div class="key">key: Welding  :: Prepare Time</div>
+              <div class="help">per inch of weld</div>
+            </div>
+          </div>
+
+          <div class="column">
+              <input id=" :: Prepare Time" type="text" name="fname" placeholder="30">
+              <div class="unit">
+                Unit: seconds
+              </div>
+          </div>
+
+
+        </div>
+        <div class="item column">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="title">Weld Time</div>
+              <div class="key">key: Welding  :: Weld Time</div>
+              <div class="help">per inch of weld</div>
+            </div>
+          </div>
+
+          <div class="column">
+              <input id=" :: Weld Time" type="text" name="fname" placeholder="2">
+              <div class="unit">
+                Unit: minutes
+              </div>
+          </div>
+
+
+        </div>
+        <div class="item column">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="title">Visual Inspection Time</div>
+              <div class="key">key: Welding  :: Visual Inspection Time</div>
+              <div class="help">per inch of weld</div>
+            </div>
+          </div>
+
+          <div class="column">
+              <input id=" :: Visual Inspection Time" type="text" name="fname" placeholder="2">
+              <div class="unit">
+                Unit: seconds
+              </div>
+          </div>
+
+
+        </div>
+
 
   <h3>Plating <h3>
 
-    <ul>
-        <li>Labor Rate
-          <ul>
-            <li>30</li>
-            <li>dollars / hour</li>
-            <li></li>
-          </ul>
-        </li>
-        <li>Setup Time
-          <ul>
-            <li>5</li>
-            <li>minutes</li>
-            <li>per part</li>
-          </ul>
-        </li>
-        <li>Stripping Time
-          <ul>
-            <li>30</li>
-            <li>seconds</li>
-            <li>per square inch of surface area</li>
-          </ul>
-        </li>
-        <li>Blasting Time
-          <ul>
-            <li>20</li>
-            <li>seconds</li>
-            <li>per square inch of surface area</li>
-          </ul>
-        </li>
-        <li>Plating Time
-          <ul>
-            <li>60</li>
-            <li>minutes</li>
-            <li>per part</li>
-          </ul>
-        </li>
-        <li>Phosphate Coating :: Preparation Time
-          <ul>
-            <li>15</li>
-            <li>minutes</li>
-            <li>per part</li>
-          </ul>
-        </li>
-        <li>Phosphate Coating :: Cleaning Time
-          <ul>
-            <li>10</li>
-            <li>minutes</li>
-            <li>per part</li>
-          </ul>
-        </li>
-        <li>Phosphate Coating :: Activation Time
-          <ul>
-            <li>20</li>
-            <li>minutes</li>
-            <li>per part</li>
-          </ul>
-        </li>
-        <li>Phosphate Coating :: Phosphating Time
-          <ul>
-            <li>60</li>
-            <li>minutes</li>
-            <li>per part</li>
-          </ul>
-        </li>
-        <li>Phosphate Coating :: Treatment Time
-          <ul>
-            <li>20</li>
-            <li>minutes</li>
-            <li>per part</li>
-          </ul>
-        </li>
-    </ul>
+        <div class="item column">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="title">Labor Rate</div>
+              <div class="key">key: Plating  :: Labor Rate</div>
+            </div>
+          </div>
+
+          <div class="column">
+              <input id=" :: Labor Rate" type="text" name="fname" placeholder="30">
+              <div class="unit">
+                Unit: dollars / hour
+              </div>
+          </div>
+
+
+        </div>
+        <div class="item column">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="title">Setup Time</div>
+              <div class="key">key: Plating  :: Setup Time</div>
+              <div class="help">per part</div>
+            </div>
+          </div>
+
+          <div class="column">
+              <input id=" :: Setup Time" type="text" name="fname" placeholder="5">
+              <div class="unit">
+                Unit: minutes
+              </div>
+          </div>
+
+
+        </div>
+        <div class="item column">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="title">Stripping Time</div>
+              <div class="key">key: Plating  :: Stripping Time</div>
+              <div class="help">per square inch of surface area</div>
+            </div>
+          </div>
+
+          <div class="column">
+              <input id=" :: Stripping Time" type="text" name="fname" placeholder="30">
+              <div class="unit">
+                Unit: seconds
+              </div>
+          </div>
+
+
+        </div>
+        <div class="item column">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="title">Blasting Time</div>
+              <div class="key">key: Plating  :: Blasting Time</div>
+              <div class="help">per square inch of surface area</div>
+            </div>
+          </div>
+
+          <div class="column">
+              <input id=" :: Blasting Time" type="text" name="fname" placeholder="20">
+              <div class="unit">
+                Unit: seconds
+              </div>
+          </div>
+
+
+        </div>
+        <div class="item column">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="title">Plating Time</div>
+              <div class="key">key: Plating  :: Plating Time</div>
+              <div class="help">per part</div>
+            </div>
+          </div>
+
+          <div class="column">
+              <input id=" :: Plating Time" type="text" name="fname" placeholder="60">
+              <div class="unit">
+                Unit: minutes
+              </div>
+          </div>
+
+
+        </div>
+        <div class="item column">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="title">Phosphate Coating :: Preparation Time</div>
+              <div class="key">key: Plating  :: Phosphate Coating :: Preparation Time</div>
+              <div class="help">per part</div>
+            </div>
+          </div>
+
+          <div class="column">
+              <input id=" :: Phosphate Coating :: Preparation Time" type="text" name="fname" placeholder="15">
+              <div class="unit">
+                Unit: minutes
+              </div>
+          </div>
+
+
+        </div>
+        <div class="item column">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="title">Phosphate Coating :: Cleaning Time</div>
+              <div class="key">key: Plating  :: Phosphate Coating :: Cleaning Time</div>
+              <div class="help">per part</div>
+            </div>
+          </div>
+
+          <div class="column">
+              <input id=" :: Phosphate Coating :: Cleaning Time" type="text" name="fname" placeholder="10">
+              <div class="unit">
+                Unit: minutes
+              </div>
+          </div>
+
+
+        </div>
+        <div class="item column">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="title">Phosphate Coating :: Activation Time</div>
+              <div class="key">key: Plating  :: Phosphate Coating :: Activation Time</div>
+              <div class="help">per part</div>
+            </div>
+          </div>
+
+          <div class="column">
+              <input id=" :: Phosphate Coating :: Activation Time" type="text" name="fname" placeholder="20">
+              <div class="unit">
+                Unit: minutes
+              </div>
+          </div>
+
+
+        </div>
+        <div class="item column">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="title">Phosphate Coating :: Phosphating Time</div>
+              <div class="key">key: Plating  :: Phosphate Coating :: Phosphating Time</div>
+              <div class="help">per part</div>
+            </div>
+          </div>
+
+          <div class="column">
+              <input id=" :: Phosphate Coating :: Phosphating Time" type="text" name="fname" placeholder="60">
+              <div class="unit">
+                Unit: minutes
+              </div>
+          </div>
+
+
+        </div>
+        <div class="item column">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="title">Phosphate Coating :: Treatment Time</div>
+              <div class="key">key: Plating  :: Phosphate Coating :: Treatment Time</div>
+              <div class="help">per part</div>
+            </div>
+          </div>
+
+          <div class="column">
+              <input id=" :: Phosphate Coating :: Treatment Time" type="text" name="fname" placeholder="20">
+              <div class="unit">
+                Unit: minutes
+              </div>
+          </div>
+
+
+        </div>
+
 
   <h3>Painting <h3>
 
-    <ul>
-        <li>Labor Rate
-          <ul>
-            <li>30</li>
-            <li>dollars / hour</li>
-            <li></li>
-          </ul>
-        </li>
-        <li>Washing Time
-          <ul>
-            <li>6</li>
-            <li>seconds</li>
-            <li>per square inch of surface area</li>
-          </ul>
-        </li>
-        <li>Masking Time
-          <ul>
-            <li>6</li>
-            <li>seconds</li>
-            <li>per square inch of surface area</li>
-          </ul>
-        </li>
-        <li>Apply Time
-          <ul>
-            <li>3</li>
-            <li>seconds</li>
-            <li>per square inch of surface area</li>
-          </ul>
-        </li>
-        <li>Curing Time
-          <ul>
-            <li>30</li>
-            <li>minutes</li>
-            <li>per part</li>
-          </ul>
-        </li>
-        <li>Drying Time
-          <ul>
-            <li>60</li>
-            <li>minutes</li>
-            <li>per part</li>
-          </ul>
-        </li>
-        <li>Inspecting Time
-          <ul>
-            <li>10</li>
-            <li>minutes</li>
-            <li>per part</li>
-          </ul>
-        </li>
-        <li>Finishing Time
-          <ul>
-            <li>30</li>
-            <li>minutes</li>
-            <li>per part</li>
-          </ul>
-        </li>
-    </ul>
+        <div class="item column">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="title">Labor Rate</div>
+              <div class="key">key: Painting  :: Labor Rate</div>
+            </div>
+          </div>
+
+          <div class="column">
+              <input id=" :: Labor Rate" type="text" name="fname" placeholder="30">
+              <div class="unit">
+                Unit: dollars / hour
+              </div>
+          </div>
+
+
+        </div>
+        <div class="item column">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="title">Washing Time</div>
+              <div class="key">key: Painting  :: Washing Time</div>
+              <div class="help">per square inch of surface area</div>
+            </div>
+          </div>
+
+          <div class="column">
+              <input id=" :: Washing Time" type="text" name="fname" placeholder="6">
+              <div class="unit">
+                Unit: seconds
+              </div>
+          </div>
+
+
+        </div>
+        <div class="item column">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="title">Masking Time</div>
+              <div class="key">key: Painting  :: Masking Time</div>
+              <div class="help">per square inch of surface area</div>
+            </div>
+          </div>
+
+          <div class="column">
+              <input id=" :: Masking Time" type="text" name="fname" placeholder="6">
+              <div class="unit">
+                Unit: seconds
+              </div>
+          </div>
+
+
+        </div>
+        <div class="item column">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="title">Apply Time</div>
+              <div class="key">key: Painting  :: Apply Time</div>
+              <div class="help">per square inch of surface area</div>
+            </div>
+          </div>
+
+          <div class="column">
+              <input id=" :: Apply Time" type="text" name="fname" placeholder="3">
+              <div class="unit">
+                Unit: seconds
+              </div>
+          </div>
+
+
+        </div>
+        <div class="item column">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="title">Curing Time</div>
+              <div class="key">key: Painting  :: Curing Time</div>
+              <div class="help">per part</div>
+            </div>
+          </div>
+
+          <div class="column">
+              <input id=" :: Curing Time" type="text" name="fname" placeholder="30">
+              <div class="unit">
+                Unit: minutes
+              </div>
+          </div>
+
+
+        </div>
+        <div class="item column">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="title">Drying Time</div>
+              <div class="key">key: Painting  :: Drying Time</div>
+              <div class="help">per part</div>
+            </div>
+          </div>
+
+          <div class="column">
+              <input id=" :: Drying Time" type="text" name="fname" placeholder="60">
+              <div class="unit">
+                Unit: minutes
+              </div>
+          </div>
+
+
+        </div>
+        <div class="item column">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="title">Inspecting Time</div>
+              <div class="key">key: Painting  :: Inspecting Time</div>
+              <div class="help">per part</div>
+            </div>
+          </div>
+
+          <div class="column">
+              <input id=" :: Inspecting Time" type="text" name="fname" placeholder="10">
+              <div class="unit">
+                Unit: minutes
+              </div>
+          </div>
+
+
+        </div>
+        <div class="item column">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="title">Finishing Time</div>
+              <div class="key">key: Painting  :: Finishing Time</div>
+              <div class="help">per part</div>
+            </div>
+          </div>
+
+          <div class="column">
+              <input id=" :: Finishing Time" type="text" name="fname" placeholder="30">
+              <div class="unit">
+                Unit: minutes
+              </div>
+          </div>
+
+
+        </div>
+
 
   <h3>X-Ray Machine <h3>
 
-    <ul>
-        <li>Cost
-          <ul>
-            <li>10</li>
-            <li>dollars</li>
-            <li>per usage</li>
-          </ul>
-        </li>
-        <li>Setup Time
-          <ul>
-            <li>10</li>
-            <li>minutes</li>
-            <li>per usage</li>
-          </ul>
-        </li>
-        <li>Scan Time
-          <ul>
-            <li>5</li>
-            <li>seconds</li>
-            <li>per inch of weld</li>
-          </ul>
-        </li>
-    </ul>
+        <div class="item column">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="title">Cost</div>
+              <div class="key">key: X-Ray Machine  :: Cost</div>
+              <div class="help">per usage</div>
+            </div>
+          </div>
+
+          <div class="column">
+              <input id=" :: Cost" type="text" name="fname" placeholder="10">
+              <div class="unit">
+                Unit: dollars
+              </div>
+          </div>
+
+
+        </div>
+        <div class="item column">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="title">Setup Time</div>
+              <div class="key">key: X-Ray Machine  :: Setup Time</div>
+              <div class="help">per usage</div>
+            </div>
+          </div>
+
+          <div class="column">
+              <input id=" :: Setup Time" type="text" name="fname" placeholder="10">
+              <div class="unit">
+                Unit: minutes
+              </div>
+          </div>
+
+
+        </div>
+        <div class="item column">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="title">Scan Time</div>
+              <div class="key">key: X-Ray Machine  :: Scan Time</div>
+              <div class="help">per inch of weld</div>
+            </div>
+          </div>
+
+          <div class="column">
+              <input id=" :: Scan Time" type="text" name="fname" placeholder="5">
+              <div class="unit">
+                Unit: seconds
+              </div>
+          </div>
+
+
+        </div>
+
 
   <h3>Material <h3>
 
-    <ul>
-        <li>Steel :: Cost
-          <ul>
-            <li>0.5</li>
-            <li>dollars / inch**3</li>
-            <li></li>
-          </ul>
-        </li>
-        <li>Aluminum :: Cost
-          <ul>
-            <li>0.8</li>
-            <li>dollars / inch**3</li>
-            <li></li>
-          </ul>
-        </li>
-        <li>Paint :: Cost
-          <ul>
-            <li>0.2</li>
-            <li>dollars / inch**2</li>
-            <li></li>
-          </ul>
-        </li>
-        <li>Powder :: Cost
-          <ul>
-            <li>0.3</li>
-            <li>dollars / inch**2</li>
-            <li></li>
-          </ul>
-        </li>
-        <li>Weld Filler :: Cost
-          <ul>
-            <li>2</li>
-            <li>dollars / inch</li>
-            <li></li>
-          </ul>
-        </li>
-    </ul>
+        <div class="item column">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="title">Steel :: Cost</div>
+              <div class="key">key: Material  :: Steel :: Cost</div>
+            </div>
+          </div>
+
+          <div class="column">
+              <input id=" :: Steel :: Cost" type="text" name="fname" placeholder="0.5">
+              <div class="unit">
+                Unit: dollars / inch**3
+              </div>
+          </div>
+
+
+        </div>
+        <div class="item column">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="title">Aluminum :: Cost</div>
+              <div class="key">key: Material  :: Aluminum :: Cost</div>
+            </div>
+          </div>
+
+          <div class="column">
+              <input id=" :: Aluminum :: Cost" type="text" name="fname" placeholder="0.8">
+              <div class="unit">
+                Unit: dollars / inch**3
+              </div>
+          </div>
+
+
+        </div>
+        <div class="item column">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="title">Paint :: Cost</div>
+              <div class="key">key: Material  :: Paint :: Cost</div>
+            </div>
+          </div>
+
+          <div class="column">
+              <input id=" :: Paint :: Cost" type="text" name="fname" placeholder="0.2">
+              <div class="unit">
+                Unit: dollars / inch**2
+              </div>
+          </div>
+
+
+        </div>
+        <div class="item column">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="title">Powder :: Cost</div>
+              <div class="key">key: Material  :: Powder :: Cost</div>
+            </div>
+          </div>
+
+          <div class="column">
+              <input id=" :: Powder :: Cost" type="text" name="fname" placeholder="0.3">
+              <div class="unit">
+                Unit: dollars / inch**2
+              </div>
+          </div>
+
+
+        </div>
+        <div class="item column">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="title">Weld Filler :: Cost</div>
+              <div class="key">key: Material  :: Weld Filler :: Cost</div>
+            </div>
+          </div>
+
+          <div class="column">
+              <input id=" :: Weld Filler :: Cost" type="text" name="fname" placeholder="2">
+              <div class="unit">
+                Unit: dollars / inch
+              </div>
+          </div>
+
+
+        </div>
+
 
 </div>

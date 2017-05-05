@@ -1,19 +1,33 @@
-<div id="vpe">
+<div id="vpe" class="container">
   <h1>VPE Data</h1>
   {{#vpeData}}
   <h3>{{category}}<h3>
 
-    <ul>
       {{#items}}
-        <li>{{name}}
-          <ul>
-            <li>{{value}}</li>
-            <li>{{unit}}</li>
-            <li>{{help}}</li>
-          </ul>
-        </li>
+        <div class="item column">
+          <div class="row">
+            <div class="col-xs-12">
+              <div class="title">{{name}}</div>
+              <div class="key">key: {{../category}} :: {{name}}</div>
+              {{#if help}}
+              <div class="help">{{help}}</div>
+              {{/if}}
+            </div>
+          </div>
+
+          <div class="column">
+              <input id="{{category}} :: {{name}}" type="text" name="fname" placeholder="{{value}}">
+              <div class="unit">
+                {{#if unit}}
+                Unit: {{unit}}
+                {{/if}}
+              </div>
+          </div>
+
+
+        </div>
       {{/items}}
-    </ul>
+
 
   {{/vpeData}}
 </div>

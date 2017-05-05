@@ -40,8 +40,10 @@ var groupedCats = formatCategories(constantsJSON);
 var data = {vpeData: makeGroupedCatsCollection(groupedCats)};
 var result = template(data);
 var style = "<style>"+cssRaw+"</style>"
+// var complete = style+result
+var complete = "<link rel=\"stylesheet\" type=\"text/css\" href=\"vpe.css\">"+"<link rel=\"stylesheet\" type=\"text/css\" href=\"vendor/bootstrap.css\">"+result
 
-fs.writeFile('index.html', style+result, function(err){
+fs.writeFile('index.html', complete, function(err){
   if (err) {
     console.log('an error occurred')
   } else {

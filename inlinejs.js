@@ -13,7 +13,16 @@ $( document ).ready(function() {
 	//On changes, re-write variable value
 	var updateGroupInputValue = function(group) {
 		group = $(group)
-		console.log(group.find('input'))
+		var inputs = group.find('input')
+		var jsonInputs = []
+
+		for (var i=0; i<inputs.length; i++) {
+			var inputPair = {}
+			inputPair[inputs[i].id] = inputs[i].value
+			jsonInputs.push(inputPair)
+		}
+
+		console.log(jsonInputs)
 	}
 
 	//Listen all all "tagged" groups

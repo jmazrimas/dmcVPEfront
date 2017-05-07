@@ -4,9 +4,6 @@ $( document ).ready(function() {
     
 
 	var userEditListener = function(event) {
-		// console.log('event')
-		// console.log(event)
-
 		updateGroupInputValue(event.currentTarget);
 	}
 
@@ -14,8 +11,15 @@ $( document ).ready(function() {
 	var updateGroupInputValue = function(group) {
 		group = $(group)
 
-		var groupTitle = group.find('h3')[0].innerText+"inputList"
+		var groupTitle = group.find('h3')[0].innerText+"inputList";
+		var inputString = returnGroupedInputs(group);
 
+		console.log(groupTitle)
+		console.log(inputString)
+
+	}
+
+	var returnGroupedInputs = function(group) {
 		var inputs = group.find('input')
 		var jsonInputs = []
 
@@ -25,9 +29,7 @@ $( document ).ready(function() {
 			jsonInputs.push(inputPair)
 		}
 
-		console.log(groupTitle)
-		console.log(JSON.stringify(jsonInputs))
-
+		return (JSON.stringify(jsonInputs))
 	}
 
 	//Listen all all "tagged" groups

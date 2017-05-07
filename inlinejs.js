@@ -9,9 +9,6 @@ var updateGroupInputValue = function(group) {
 	var groupTitle = group.find('h3')[0].innerText+"inputList";
 	var inputString = returnGroupedInputs(group);
 
-	console.log(groupTitle)
-	console.log(inputString)
-
 }
 
 var returnGroupedInputs = function(group) {
@@ -24,11 +21,13 @@ var returnGroupedInputs = function(group) {
 			inputPair[inputs[i].id] = inputs[i].value
 			jsonInputs.push(inputPair)	
 		} else if ($(inputs[i]).hasClass('addedInputValue')){
-			inputPair['addedThing'] = inputs[i].value
+			var addedInputName = $(inputs[i]).closest('.item').find('.addedInput')[0].value
+			inputPair[addedInputName] = inputs[i].value
 			jsonInputs.push(inputPair)	
 		}
 	}
 
+	console.log(JSON.stringify(jsonInputs))
 	return (JSON.stringify(jsonInputs))
 }
 
@@ -48,7 +47,6 @@ var buildInputTemplate = function(exampleInput) {
 
 	inputTemplate = exampleInput;
 
-	console.log(inputTemplate)
 }
 
 $( document ).ready(function() {
@@ -64,7 +62,7 @@ $( document ).ready(function() {
 
 	//Listen on add buttons
 	$("button.addInput").click(function(event){
-		inputTemplate.insertAfter(event.target);
+		inputTemplate.clone().insertAfter(event.target);
 	});
 
 	buildInputTemplate($("#vpe").find(".item").first().clone());

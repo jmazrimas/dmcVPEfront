@@ -13,6 +13,9 @@ $( document ).ready(function() {
 	//On changes, re-write variable value
 	var updateGroupInputValue = function(group) {
 		group = $(group)
+
+		var groupTitle = group.find('h3')[0].innerText+"inputList"
+
 		var inputs = group.find('input')
 		var jsonInputs = []
 
@@ -22,7 +25,9 @@ $( document ).ready(function() {
 			jsonInputs.push(inputPair)
 		}
 
-		console.log(jsonInputs)
+		console.log(groupTitle)
+		console.log(JSON.stringify(jsonInputs))
+
 	}
 
 	//Listen all all "tagged" groups

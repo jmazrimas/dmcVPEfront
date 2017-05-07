@@ -2,7 +2,7 @@
   <h1>VPE Data</h1>
       <div class="userEditGroup">
 
-    <h3>Machining <h3>
+    <h3>Machining </h3>
 
         <div class="item column">
           <div class="row">
@@ -96,7 +96,7 @@
       </div>
       <div>
 
-    <h3>Casting <h3>
+    <h3>Casting </h3>
 
         <div class="item column">
           <div class="row">
@@ -227,7 +227,7 @@
       </div>
       <div>
 
-    <h3>Investment Casting <h3>
+    <h3>Investment Casting </h3>
 
         <div class="item column">
           <div class="row">
@@ -251,7 +251,7 @@
       </div>
       <div>
 
-    <h3>General Labor <h3>
+    <h3>General Labor </h3>
 
         <div class="item column">
           <div class="row">
@@ -345,7 +345,7 @@
       </div>
       <div>
 
-    <h3>Welding <h3>
+    <h3>Welding </h3>
 
         <div class="item column">
           <div class="row">
@@ -422,7 +422,7 @@
       </div>
       <div>
 
-    <h3>Plating <h3>
+    <h3>Plating </h3>
 
         <div class="item column">
           <div class="row">
@@ -607,7 +607,7 @@
       </div>
       <div>
 
-    <h3>Painting <h3>
+    <h3>Painting </h3>
 
         <div class="item column">
           <div class="row">
@@ -756,7 +756,7 @@
       </div>
       <div>
 
-    <h3>X-Ray Machine <h3>
+    <h3>X-Ray Machine </h3>
 
         <div class="item column">
           <div class="row">
@@ -816,7 +816,7 @@
       </div>
       <div>
 
-    <h3>Material <h3>
+    <h3>Material </h3>
 
         <div class="item column">
           <div class="row">
@@ -921,6 +921,9 @@ $( document ).ready(function() {
 	//On changes, re-write variable value
 	var updateGroupInputValue = function(group) {
 		group = $(group)
+
+		var groupTitle = group.find('h3')[0].innerText+"inputList"
+
 		var inputs = group.find('input')
 		var jsonInputs = []
 
@@ -930,7 +933,9 @@ $( document ).ready(function() {
 			jsonInputs.push(inputPair)
 		}
 
-		console.log(jsonInputs)
+		console.log(groupTitle)
+		console.log(JSON.stringify(jsonInputs))
+
 	}
 
 	//Listen all all "tagged" groups

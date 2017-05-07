@@ -1,6 +1,8 @@
-<link rel="stylesheet" type="text/css" href="vpe.css"><link rel="stylesheet" type="text/css" href="vendor/bootstrap.css"><div id="vpe" class="container">
+<link rel="stylesheet" type="text/css" href="vpe.css"><link rel="stylesheet" type="text/css" href="vendor/bootstrap.css"><script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="crossorigin="anonymous"></script><div id="vpe" class="container">
   <h1>VPE Data</h1>
-  <h3>Machining <h3>
+      <div class="userEditGroup">
+
+    <h3>Machining <h3>
 
         <div class="item column">
           <div class="row">
@@ -91,8 +93,10 @@
 
         </div>
 
+      </div>
+      <div>
 
-  <h3>Casting <h3>
+    <h3>Casting <h3>
 
         <div class="item column">
           <div class="row">
@@ -220,8 +224,10 @@
 
         </div>
 
+      </div>
+      <div>
 
-  <h3>Investment Casting <h3>
+    <h3>Investment Casting <h3>
 
         <div class="item column">
           <div class="row">
@@ -242,8 +248,10 @@
 
         </div>
 
+      </div>
+      <div>
 
-  <h3>General Labor <h3>
+    <h3>General Labor <h3>
 
         <div class="item column">
           <div class="row">
@@ -334,8 +342,10 @@
 
         </div>
 
+      </div>
+      <div>
 
-  <h3>Welding <h3>
+    <h3>Welding <h3>
 
         <div class="item column">
           <div class="row">
@@ -409,8 +419,10 @@
 
         </div>
 
+      </div>
+      <div>
 
-  <h3>Plating <h3>
+    <h3>Plating <h3>
 
         <div class="item column">
           <div class="row">
@@ -592,8 +604,10 @@
 
         </div>
 
+      </div>
+      <div>
 
-  <h3>Painting <h3>
+    <h3>Painting <h3>
 
         <div class="item column">
           <div class="row">
@@ -739,8 +753,10 @@
 
         </div>
 
+      </div>
+      <div>
 
-  <h3>X-Ray Machine <h3>
+    <h3>X-Ray Machine <h3>
 
         <div class="item column">
           <div class="row">
@@ -797,8 +813,10 @@
 
         </div>
 
+      </div>
+      <div>
 
-  <h3>Material <h3>
+    <h3>Material <h3>
 
         <div class="item column">
           <div class="row">
@@ -886,5 +904,17 @@
 
         </div>
 
-
+      </div>
 </div>
+<script>
+
+$( document ).ready(function() {
+    
+	//Listen all all "tagged" groups
+	$(".userEditGroup").click(function(event){
+		console.log("click!!!!")
+	})
+
+
+
+});</script>

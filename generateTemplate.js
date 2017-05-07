@@ -27,7 +27,12 @@ function makeGroupedCatsCollection(groupedCats) {
   categoryCollection = []
   for (var k in groupedCats) {
     if (groupedCats.hasOwnProperty(k)) {
-       categoryCollection.push({category: k, items: groupedCats[k]});
+      var userEditGroup = false;
+       if (k.trim() == 'Machining') {
+        userEditGroup = true;
+       }
+
+       categoryCollection.push({category: k, items: groupedCats[k], userEditGroup: userEditGroup});
     }
   }
   return categoryCollection;
@@ -35,13 +40,15 @@ function makeGroupedCatsCollection(groupedCats) {
 
 var source = fs.readFileSync('./template.handlebars', 'utf-8');
 var cssRaw = fs.readFileSync('./vpe.css', 'utf-8');
+var inlineJs = fs.readFileSync('./inlineJs.js', 'utf-8');
 var template = handlebars.compile(source);
 var groupedCats = formatCategories(constantsJSON);
 var data = {vpeData: makeGroupedCatsCollection(groupedCats)};
 var result = template(data);
 var style = "<style>"+cssRaw+"</style>"
+var inlineJsScript = "<script>"+inlineJs+"</script>"
 // var complete = style+result
-var complete = "<link rel=\"stylesheet\" type=\"text/css\" href=\"vpe.css\">"+"<link rel=\"stylesheet\" type=\"text/css\" href=\"vendor/bootstrap.css\">"+result
+var complete = "<link rel=\"stylesheet\" type=\"text/css\" href=\"vpe.css\">"+"<link rel=\"stylesheet\" type=\"text/css\" href=\"vendor/bootstrap.css\">"+"<script src=\"https://code.jquery.com/jquery-3.2.1.min.js\" integrity=\"sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=\"crossorigin=\"anonymous\"></script>"+result+inlineJsScript
 
 fs.writeFile('index.html', complete, function(err){
   if (err) {

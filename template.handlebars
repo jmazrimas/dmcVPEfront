@@ -1,7 +1,13 @@
 <div id="vpe" class="container">
   <h1>VPE Data</h1>
   {{#vpeData}}
-  <h3>{{category}}<h3>
+    {{#if userEditGroup}}
+      <div class="userEditGroup">
+    {{else}}
+      <div>
+    {{/if}}
+
+    <h3>{{category}}<h3>
 
       {{#items}}
         <div class="item column">
@@ -28,6 +34,6 @@
         </div>
       {{/items}}
 
-
+      </div>
   {{/vpeData}}
 </div>

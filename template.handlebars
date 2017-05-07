@@ -8,12 +8,18 @@
     {{/if}}
 
     <h3>{{category}}</h3>
+      {{#if userEditGroup}}
+        <button class="addInput">Add Another</button>
+      {{/if}}
 
       {{#items}}
         <div class="item column">
           <div class="row">
             <div class="col-xs-12">
               <div class="title">{{name}}</div>
+              {{#if ../userEditGroup}}
+                <button class="removeInput">Remove</button>
+              {{/if}}
               <div class="key">key: {{../category}} :: {{name}}</div>
               {{#if help}}
               <div class="help">{{help}}</div>

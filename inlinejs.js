@@ -34,5 +34,9 @@ $( document ).ready(function() {
 
 	//Listen all all "tagged" groups
 	$(".userEditGroup").click(userEditListener).keyup(userEditListener);
+	$("button.removeInput").click(function(event){
+		var inputToRemove = event.target.closest('div.item');
+		inputToRemove.remove();
+	});
 
 });

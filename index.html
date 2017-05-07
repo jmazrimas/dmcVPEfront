@@ -3,11 +3,13 @@
       <div class="userEditGroup">
 
     <h3>Machining </h3>
+        <button class="addInput">Add Another</button>
 
         <div class="item column">
           <div class="row">
             <div class="col-xs-12">
               <div class="title">Labor Rate</div>
+                <button class="removeInput">Remove</button>
               <div class="key">key: Machining  :: Labor Rate</div>
             </div>
           </div>
@@ -25,6 +27,7 @@
           <div class="row">
             <div class="col-xs-12">
               <div class="title">Setup Time</div>
+                <button class="removeInput">Remove</button>
               <div class="key">key: Machining  :: Setup Time</div>
             </div>
           </div>
@@ -42,6 +45,7 @@
           <div class="row">
             <div class="col-xs-12">
               <div class="title">Program Time</div>
+                <button class="removeInput">Remove</button>
               <div class="key">key: Machining  :: Program Time</div>
               <div class="help">per cubic inch of removal volume - as a proxy for part complexity</div>
             </div>
@@ -60,6 +64,7 @@
           <div class="row">
             <div class="col-xs-12">
               <div class="title">Run Time</div>
+                <button class="removeInput">Remove</button>
               <div class="key">key: Machining  :: Run Time</div>
               <div class="help">per cubic inch of removal volume - as a proxy for part complexity</div>
             </div>
@@ -78,6 +83,7 @@
           <div class="row">
             <div class="col-xs-12">
               <div class="title">Inspect Time</div>
+                <button class="removeInput">Remove</button>
               <div class="key">key: Machining  :: Inspect Time</div>
               <div class="help">per cubic inch of removal volume - as a proxy for part complexity</div>
             </div>
@@ -942,5 +948,9 @@ $( document ).ready(function() {
 
 	//Listen all all "tagged" groups
 	$(".userEditGroup").click(userEditListener).keyup(userEditListener);
+	$("button.removeInput").click(function(event){
+		var inputToRemove = event.target.closest('div.item');
+		inputToRemove.remove();
+	});
 
 });</script>

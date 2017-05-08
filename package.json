@@ -4,7 +4,8 @@
   "description": "",
   "main": "core.js",
   "dependencies": {
-    "handlebars": "^4.0.8"
+    "handlebars": "^4.0.8",
+    "node-minify": "^2.0.4"
   },
   "devDependencies": {},
   "scripts": {

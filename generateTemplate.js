@@ -40,20 +40,38 @@ function makeGroupedCatsCollection(groupedCats) {
 
 var source = fs.readFileSync('./template.handlebars', 'utf-8');
 var cssRaw = fs.readFileSync('./vpe.css', 'utf-8');
-var inlineJs = fs.readFileSync('./inlineJs.js', 'utf-8');
+// var inlineJs = fs.readFileSync('./inlineJs.js', 'utf-8');
 var template = handlebars.compile(source);
 var groupedCats = formatCategories(constantsJSON);
 var data = {vpeData: makeGroupedCatsCollection(groupedCats)};
 var result = template(data);
 var style = "<style>"+cssRaw+"</style>"
-var inlineJsScript = "<script>"+inlineJs+"</script>"
-var complete = "<link rel=\"stylesheet\" type=\"text/css\" href=\"vpe.css\">"+"<link rel=\"stylesheet\" type=\"text/css\" href=\"vendor/bootstrap.css\">"+"<script src=\"https://code.jquery.com/jquery-3.2.1.min.js\" integrity=\"sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=\"crossorigin=\"anonymous\"></script>"+result+inlineJsScript
-complete = complete.replace(/\n/g, "");
+var inlineJs;
+var compressor = require('node-minify');
 
-fs.writeFile('index.html', complete, function(err){
-  if (err) {
-    console.log('an error occurred')
-  } else {
-    console.log('wrote file')
+// Using UglifyJS 
+compressor.minify({
+  compressor: 'uglifyjs',
+  input: './inlinejs.js',
+  output: 'test.js',
+  callback: function (err, min) {
+    inlineJs = min;
+    writeIndexHtml();
   }
-})
+});
+
+
+var writeIndexHtml = function() {
+  var inlineJsScript = "<script>"+inlineJs+"</script>"
+
+  var complete = "<link rel=\"stylesheet\" type=\"text/css\" href=\"vpe.css\">"+"<link rel=\"stylesheet\" type=\"text/css\" href=\"vendor/bootstrap.css\">"+"<script src=\"https://code.jquery.com/jquery-3.2.1.min.js\" integrity=\"sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=\"crossorigin=\"anonymous\"></script>"+result+inlineJsScript
+  complete = complete.replace(/\n/g, "");
+
+  fs.writeFile('index.html', complete, function(err){
+    if (err) {
+      console.log('an error occurred')
+    } else {
+      console.log('wrote file')
+    }
+  })
+}

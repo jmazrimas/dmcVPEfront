@@ -10,6 +10,7 @@
     <h3>{{category}}</h3>
       {{#if userEditGroup}}
         <button class="addInput">Add Another</button>
+        <input id="{{category}}inputs" class="json_inputs" type="hidden">
       {{/if}}
 
       {{#items}}
@@ -28,7 +29,11 @@
           </div>
 
           <div class="column">
-              <input id="{{category}} :: {{name}}" type="text" name="fname" placeholder="{{value}}">
+              {{#if ../userEditGroup}}
+                <input input_tag="{{category}} :: {{name}}" type="text" name="fname" placeholder="{{value}}">
+              {{else}}
+                <input id="{{category}} :: {{name}}" type="text" name="fname" placeholder="{{value}}">
+              {{/if}}
               <div class="unit">
                 {{#if unit}}
                 Unit: {{unit}}

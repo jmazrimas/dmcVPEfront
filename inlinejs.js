@@ -6,8 +6,9 @@ var userEditListener = function(event) {
 var updateGroupInputValue = function(group) {
 	group = $(group)
 
-	var groupTitle = group.find('h3')[0].innerText+"inputList";
 	var inputString = returnGroupedInputs(group);
+	group.find("[type='hidden']").val(inputString);
+	console.log(group.find("[type='hidden']"))
 
 }
 
@@ -17,8 +18,9 @@ var returnGroupedInputs = function(group) {
 
 	for (var i=0; i<inputs.length; i++) {
 		var inputPair = {}
-		if (!$(inputs[i]).hasClass('addedInput')) {
-			inputPair[inputs[i].id] = inputs[i].value
+		if (!$(inputs[i]).hasClass('addedInput') && !$(inputs[i]).hasClass('json_inputs')) {
+			inputName = inputs[i].id || $(inputs[i]).attr('input_tag')
+			inputPair[inputName] = inputs[i].value
 			jsonInputs.push(inputPair)	
 		} else if ($(inputs[i]).hasClass('addedInputValue')){
 			var addedInputName = $(inputs[i]).closest('.item').find('.addedInput')[0].value
@@ -27,7 +29,6 @@ var returnGroupedInputs = function(group) {
 		}
 	}
 
-	console.log(JSON.stringify(jsonInputs))
 	return (JSON.stringify(jsonInputs))
 }
 
@@ -54,7 +55,7 @@ $( document ).ready(function() {
 	//Listen all all "tagged" groups
 	$(".userEditGroup").click(userEditListener).keyup(userEditListener);
 
-	//Listen on remove buttons
+	//Listen on remove buttons and remove when clicked
 	$("#vpe").click(function(event){
 		var target = $(event.target);
 		if (target.hasClass('removeInput')) {

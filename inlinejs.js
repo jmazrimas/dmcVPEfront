@@ -4,7 +4,7 @@ var userEditListener = function(event) {
 
 //On changes, re-write variable value
 var updateGroupInputValue = function(group) {
-	group = $(group)
+	group = $(group);
 	//Take all the input fields and make them a JSON string
 	var inputString = returnGroupedInputs(group);
 	//Find the group's hidden input and set its value = json string
@@ -13,23 +13,23 @@ var updateGroupInputValue = function(group) {
 }
 
 var returnGroupedInputs = function(group) {
-	var inputs = group.find('input')
-	var jsonInputs = []
+	var inputs = group.find('input');
+	var jsonInputs = [];
 
 	for (var i=0; i<inputs.length; i++) {
-		var inputPair = {}
+		var inputPair = {};
 		if (!$(inputs[i]).hasClass('addedInput') && !$(inputs[i]).hasClass('json_inputs')) {
-			inputName = inputs[i].id || $(inputs[i]).attr('input_tag')
-			inputPair[inputName] = inputs[i].value
-			jsonInputs.push(inputPair)	
+			inputName = inputs[i].id || $(inputs[i]).attr('input_tag');
+			inputPair[inputName] = inputs[i].value;
+			jsonInputs.push(inputPair);
 		} else if ($(inputs[i]).hasClass('addedInputValue')){
-			var addedInputName = $(inputs[i]).closest('.item').find('.addedInput')[0].value
-			inputPair[addedInputName] = inputs[i].value
-			jsonInputs.push(inputPair)	
+			var addedInputName = $(inputs[i]).closest('.item').find('.addedInput')[0].value;
+			inputPair[addedInputName] = inputs[i].value;
+			jsonInputs.push(inputPair);
 		}
 	}
 
-	return (JSON.stringify(jsonInputs))
+	return (JSON.stringify(jsonInputs));
 }
 
 
@@ -82,6 +82,5 @@ $( document ).ready(function() {
 	//Once template is ready, create an input shell to be used
 	//	when new inputs are added
 	buildInputTemplate($("#vpe").find(".item").first().clone());
-
 
 });

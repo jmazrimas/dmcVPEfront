@@ -47,8 +47,8 @@ var data = {vpeData: makeGroupedCatsCollection(groupedCats)};
 var result = template(data);
 var style = "<style>"+cssRaw+"</style>"
 var inlineJsScript = "<script>"+inlineJs+"</script>"
-// var complete = style+result
 var complete = "<link rel=\"stylesheet\" type=\"text/css\" href=\"vpe.css\">"+"<link rel=\"stylesheet\" type=\"text/css\" href=\"vendor/bootstrap.css\">"+"<script src=\"https://code.jquery.com/jquery-3.2.1.min.js\" integrity=\"sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=\"crossorigin=\"anonymous\"></script>"+result+inlineJsScript
+complete = complete.replace(/\n/g, "");
 
 fs.writeFile('index.html', complete, function(err){
   if (err) {

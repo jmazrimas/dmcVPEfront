@@ -969,9 +969,12 @@ $( document ).ready(function() {
 	$(".userEditGroup").click(userEditListener).keyup(userEditListener);
 
 	//Listen on remove buttons
-	$("button.removeInput").click(function(event){
-		var inputToRemove = event.target.closest('div.item');
-		inputToRemove.remove();
+	$("#vpe").click(function(event){
+		var target = $(event.target);
+		if (target.hasClass('removeInput')) {
+			var inputToRemove = event.target.closest('div.item');
+			inputToRemove.remove();
+		}
 	});
 
 	//Listen on add buttons

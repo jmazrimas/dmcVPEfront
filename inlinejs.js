@@ -5,10 +5,10 @@ var userEditListener = function(event) {
 //On changes, re-write variable value
 var updateGroupInputValue = function(group) {
 	group = $(group)
-
+	//Take all the input fields and make them a JSON string
 	var inputString = returnGroupedInputs(group);
+	//Find the group's hidden input and set its value = json string
 	group.find("[type='hidden']").val(inputString);
-	console.log(group.find("[type='hidden']"))
 
 }
 
@@ -32,6 +32,7 @@ var returnGroupedInputs = function(group) {
 	return (JSON.stringify(jsonInputs))
 }
 
+
 var inputTemplate;
 
 var buildInputTemplate = function(exampleInput) {
@@ -50,6 +51,12 @@ var buildInputTemplate = function(exampleInput) {
 
 }
 
+var updateAllInputGroups = function() {
+	$('.userEditGroup').each(function(i, group){
+		updateGroupInputValue(group);
+	})
+}
+
 $( document ).ready(function() {
 
 	//Listen all all "tagged" groups
@@ -58,9 +65,12 @@ $( document ).ready(function() {
 	//Listen on remove buttons and remove when clicked
 	$("#vpe").click(function(event){
 		var target = $(event.target);
+
 		if (target.hasClass('removeInput')) {
 			var inputToRemove = event.target.closest('div.item');
 			inputToRemove.remove();
+			//After removing, update all the groups
+			updateAllInputGroups();
 		}
 	});
 
@@ -69,6 +79,9 @@ $( document ).ready(function() {
 		inputTemplate.clone().insertAfter(event.target);
 	});
 
+	//Once template is ready, create an input shell to be used
+	//	when new inputs are added
 	buildInputTemplate($("#vpe").find(".item").first().clone());
+
 
 });
